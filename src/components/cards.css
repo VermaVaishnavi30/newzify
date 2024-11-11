@@ -1,0 +1,72 @@
+/* Card.css */
+
+.card-container {
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space out cards evenly */
+    margin: -10px; /* Adjust for the padding in .card */
+  }
+  
+  .card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden; /* Ensures content doesn't overflow the card */
+    margin: 10px; /* Space around each card */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    max-width: 300px; /* Max width for the card */
+    flex: 1 1 calc(33.33% - 20px); /* Responsive card width: three cards per row */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+  }
+  
+  .card img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .cardcontent {
+    padding: 15px; /* Padding inside the card */
+  }
+  
+  .cardcontent a {
+    font-size: 1.2em; /* Font size for the title */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .cardcontent a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .cardcontent p {
+    font-size: 0.9em; /* Font size for description */
+    color: #555; /* Lighter text color */
+    margin: 10px 0; /* Margin for spacing */
+  }
+  
+  .cardcontent button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.9em; /* Font size for button */
+    transition: background-color 0.2s; /* Transition for hover effect */
+  }
+  
+  .cardcontent button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .card {
+      flex: 1 1 calc(100% - 20px); /* Full width on small screens */
+    }
+  }
+  
